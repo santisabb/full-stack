@@ -1,1 +1,1 @@
-Aqui estare agregando distintas practicas basica de JavaScript.
+Aqui estare agregando distintas practicas basicas de JavaScript.
