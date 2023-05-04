@@ -1,3 +1,4 @@
+/*
 array1 = [1,2,3,4];
 
 function criterio (array , num){
@@ -22,4 +23,29 @@ function buscar (array , criterio , siVacio ){
     else {return siVacio()};
 }
 
+
 console.log(buscar);
+*/
+
+
+function  criterio  (elem , input){
+    if (elem === input) {
+        return true;
+    } else {return false;}
+}
+
+function siVacio(){
+    message = console.log('Elemento no hallado');
+    return message;
+}
+
+array = [1,2,3,4,5];
+function buscar(array , criterio ,siVacio){
+    for (let i = 0 ; i < array.length ; i++){
+        criterio(array[i] , 3);
+    }
+    if (criterio()) {msj = console.log('Elemento encontrado');
+                                 return msj
+} else {siVacio()}
+}
+buscar(array , criterio , siVacio);
