@@ -26,9 +26,9 @@ function buscar (array , criterio , siVacio ){
 
 console.log(buscar);
 */
+buscar([1,2,3,4,5] , criterio , siVacio);
 
-
-function  criterio  (elem , input){
+function  criterio  (elem , input ){
     if (elem === input) {
         return true;
     } else {return false;}
@@ -39,13 +39,13 @@ function siVacio(){
     return message;
 }
 
-array = [1,2,3,4,5];
 function buscar(array , criterio ,siVacio){
     for (let i = 0 ; i < array.length ; i++){
-        criterio(array[i] , 3);
-    }
-    if (criterio()) {msj = console.log('Elemento encontrado');
-                                 return msj
-} else {siVacio()}
+        criterio(array[i] , 6);
+        
+    };
+    if (criterio() == true) {msj = console.log('Elemento encontrado');
+                    return msj;
+} else if (criterio() == false) {siVacio();}
 }
-buscar(array , criterio , siVacio);
+
