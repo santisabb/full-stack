@@ -23,15 +23,19 @@ function buscar (array , criterio , siVacio ){
     else {return siVacio()};
 }
 
-
 console.log(buscar);
-*/
-buscar([1,2,3,4,5] , criterio , siVacio);
 
+este codigo NO funciona; esta fue la primera version.
+*/
+
+/*
+buscar([1,2,3,4,5] , criterio , siVacio);
+var boolean , b;
 function  criterio  (elem , input ){
     if (elem === input) {
-        return true;
-    } else {return false;}
+         b = true;
+    } else {b = false;}
+    return b;
 }
 
 function siVacio(){
@@ -39,13 +43,37 @@ function siVacio(){
     return message;
 }
 
-function buscar(array , criterio ,siVacio){
+function buscar(array , unaFuncion ,siVacio){
     for (let i = 0 ; i < array.length ; i++){
-        criterio(array[i] , 6);
+        unaFuncion(array[i] , 4);
         
     };
-    if (criterio() == true) {msj = console.log('Elemento encontrado');
+    if (b === true) {msj = console.log('Elemento encontrado');
                     return msj;
-} else if (criterio() == false) {siVacio();}
+} else if (b === false) {siVacio();}
+}
+*/
+
+let unarray = [1,23,42,4,8];
+
+buscar([1,2,3,4,5] , criterio , siVacio);
+
+var b;
+function siVacio(){
+    message = console.log('Elemento no hallado');
+    return message;
 }
 
+function criterio(input, unarray){
+    b = unarray.includes(input);
+    return b;
+}
+
+function buscar(array , unaFuncion , mensaje){
+    for (let i = 0 ; i < array.length ; i++){
+        unaFuncion(array , 3);
+    }
+    if (b === true){msj = console.log('Elemento encontrado');
+                    return msj;
+     } else (mensaje())
+}
