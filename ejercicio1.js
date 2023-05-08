@@ -92,13 +92,13 @@ function criterio(elemArray , input){
     }
 }
 
-function buscar (unArray , mensaje , vOf){
+function buscar (unArray , mensaje , criterio){
     for (let i = 0 ; i < unArray.length ; i++){
         const elem = unArray[i];
-        vOf(elem , 5);
+        criterio(elem , 5);
         }
         return (mensaje());
     }
 
 
-buscar([1,2,3,4,5] , siVacio , criterio);
+buscar([1,2,3,4,5] , siVacio , criterio(1 , 5));
