@@ -86,14 +86,19 @@ function siVacio(){
     return msj;
 }
 
-function buscar (unArray , mensaje , input){
+function criterio(elemArray , input){
+    if (elemArray === input){
+        return input;
+    }
+}
+
+function buscar (unArray , mensaje , vOf){
     for (let i = 0 ; i < unArray.length ; i++){
         const elem = unArray[i];
-        if (elem === input){
-            return input;
+        vOf(elem , 5);
         }
+        return (mensaje());
     }
-    return mensaje();
-}
-var nro;
-buscar([1,2,3,4,5] , siVacio , 4);
+
+
+buscar([1,2,3,4,5] , siVacio , criterio);
