@@ -52,8 +52,9 @@ function buscar(array , unaFuncion ,siVacio){
                     return msj;
 } else if (b === false) {siVacio();}
 }
+este bloque tira mejores resultados pero no los esperados.
 */
-
+/*
 let unarray = [1,23,42,4,8];
 
 buscar([1,2,3,4,5] , criterio , siVacio);
@@ -77,3 +78,22 @@ function buscar(array , unaFuncion , mensaje){
                     return msj;
      } else (mensaje())
 }
+este codigo tampoco funciona
+*/
+
+function siVacio(){
+    msj = console.log('Elemento no hallado');
+    return msj;
+}
+
+function buscar (unArray , mensaje , input){
+    for (let i = 0 ; i < unArray.length ; i++){
+        const elem = unArray[i];
+        if (elem === input){
+            return input;
+        }
+    }
+    return mensaje();
+}
+var nro;
+buscar([1,2,3,4,5] , siVacio , 4);
