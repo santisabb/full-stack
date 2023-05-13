@@ -1,10 +1,9 @@
-buscar([1,2,3,4,5] , criterio , siVacio);
-var boolean , b;
+buscar([1,2,3] , criterio , siVacio);
+var  b;
 function  criterio  (elem , input ){
     if (elem === input) {
-         b = true;
-    } else {b = false;}
-    return b;
+         return true;
+    } return false;
 }
 
 function siVacio(){
@@ -12,12 +11,12 @@ function siVacio(){
     return message;
 }
 
-function buscar(array , unaFuncion ,siVacio){
+function buscar(array , unaFuncion ,mensaje){
     for (let i = 0 ; i < array.length ; i++){
-        unaFuncion(array[i] , 4);
+     b =  unaFuncion(array[i] , 2);
         
     };
     if (b === true) {msj = console.log('Elemento encontrado');
                     return msj;
-} else if (b === false) {siVacio();}
+} else if (b === false) {mensaje();}
 }
